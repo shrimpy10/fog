@@ -1,6 +1,9 @@
 name: Send Random Meme
 
 on:
+  push:                  # ← test on every push
+    branches:
+      - main
   schedule:
     # every 5 minutes (UTC)
     - cron: '*/5 * * * *'
