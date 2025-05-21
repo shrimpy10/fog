@@ -1,11 +1,9 @@
 name: Send Random Meme
 
 on:
-
+  workflow_dispatch:
   schedule:
-    # every 5 minutes (UTC)
     - cron: '*/6 * * * *'
-
 jobs:
   send:
     runs-on: ubuntu-latest
