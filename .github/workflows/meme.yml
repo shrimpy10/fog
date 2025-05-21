@@ -22,5 +22,5 @@ jobs:
       - name: Send meme
         run: python automateFog.py
         env:
-          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-          CHAT_ID: ${{ secrets.CHAT_ID }}
+          BOT_TOKEN: '7053656993:AAH1THmz8dRotjYErpQCrH6d39oFfnvUyw4'
+          CHAT_ID: '-1002673571949'
