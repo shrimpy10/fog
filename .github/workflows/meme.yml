@@ -9,7 +9,8 @@ jobs:
   send:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Check out repo
+        uses: actions/checkout@v3
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -22,5 +23,5 @@ jobs:
       - name: Send meme
         run: python automateFog.py
         env:
-          BOT_TOKEN: '7053656993:AAH1THmz8dRotjYErpQCrH6d39oFfnvUyw4'
-          CHAT_ID: '-1002673571949'
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          CHAT_ID:  ${{ secrets.CHAT_ID }}
