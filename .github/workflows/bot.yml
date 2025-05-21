@@ -1,15 +1,16 @@
 name: Send Random Meme
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: '*/6 * * * *'
+    - cron: '*/5 * * * *'   # every 5 minutes UTC
+
 jobs:
   send:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out code
-        uses: actions/checkout@v3
-
-      - name: Run meme script
-        run: python automateFog.py
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - run: pip install -r requirements.txt
+      - run: python automateFog.py
