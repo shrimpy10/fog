@@ -1,4 +1,4 @@
-name: Send Random Meme
+name: Fog Meme
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   send:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
