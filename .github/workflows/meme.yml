@@ -3,7 +3,7 @@ name: Send Random Meme
 on:
   schedule:
     # runs every 5 minutes (minimum resolution)
-    - cron:  '*/5 * * * *'
+    - cron: '*/5 * * * *'
 
 jobs:
   send:
